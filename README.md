@@ -3,7 +3,7 @@
 
 **Demo Video: https://www.youtube.com/watch?v=4c6pQg3q4Vc**
 
-**Slides**: [blockvotes.pdf](BlocVotes.pdf)
+**Slides**: [BlocVotes.pdf](blockvotes.pdf)
 
 # Topic 
 
