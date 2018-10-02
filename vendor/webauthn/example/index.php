@@ -1,24 +1,23 @@
 <?php
-// voting system
 
 /*
 If you put the whole webauthn directory in the www document root and put an index.php in there 
 which just includes this file, it should then work. Alternatively set it as a link to this file.
 */
  
-include_once($_SERVER['DOCUMENT_ROOT'].'/../vendor/webauthn/src/webauthn.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/webauthn/src/webauthn.php');
 
 /* from https://github.com/2tvenom/CBOREncode :  */
-include_once($_SERVER['DOCUMENT_ROOT'].'/../vendor/CBOREncode/src/CBOR/CBOREncoder.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/../vendor/CBOREncode/src/CBOR/Types/CBORByteString.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/../vendor/CBOREncode/src/CBOR/CBORExceptions.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/CBOREncode/src/CBOR/CBOREncoder.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/CBOREncode/src/CBOR/Types/CBORByteString.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/CBOREncode/src/CBOR/CBORExceptions.php');
 
 /* In this example, the user database is simply a directory of json files 
   named by their username (urlencoded so there are no weird characters 
   in the file names). For simplicity, it's in the HTML tree so someone 
   could look at it - you really, really don't want to do this for a 
   live system */
-define('USER_DATABASE', dirname(dirname(__DIR__)).'/xampp/.users');
+define('USER_DATABASE', dirname(dirname(__DIR__)).'/.users');
 if (! file_exists(USER_DATABASE)) {
   if (! @mkdir(USER_DATABASE)) {
     error_log('Cannot create user database directory - is the html directory writable by the web server? If not: "mkdir .users; chmod 777 .users"');
@@ -184,14 +183,14 @@ h2 {
 }
 </style>
 
-<script src='/assets/scripts/webauthnregister.js'></script>
-<script src='/assets/scripts/webauthnauthenticate.js'></script>
+<script src='/webauthn/src/webauthnregister.js'></script>
+<script src='/webauthn/src/webauthnauthenticate.js'></script>
 
 </head>
 <body>
-  <h1>BlocID Alpha</h1>
+  <h1>webauthn php server side example and test</h1>
   <ul>
-	<li><a href='https://github.com/blocbit/blocid'>GitHub</a>
+	<li><a href='https://github.com/davidearl/webauthn'>GitHub</a>
   </ul>
 
   <div class='cerror'></div>
@@ -206,7 +205,7 @@ h2 {
 		<input type='submit' value='Submit'>
 	  </form>
 	  <div class='cdokey' id='iregisterdokey'>
-		Press button on inserted key
+		Do your thing: press button on key, swipe fingerprint or whatever
 	  </div>
 	</div>
 
@@ -217,7 +216,7 @@ h2 {
 		<input type='submit' value='Submit'>
 	  </form>
 	  <div class='cdokey' id='ilogindokey'>
-		Press button on inserted key
+		Do your thing: press button on key, swipe fingerprint or whatever
 	  </div>
 	  
 	</div>
