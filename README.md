@@ -160,7 +160,7 @@ STMP_PASSWORD=password
 
 **Database**
 
-The sample SQL file is generated and uploaded as the file[ `blockvotes.sql`](https://gist.github.com/yfgeek/75c53298d59f335c65a6cc03703ec02e) , please import it to MySQL.
+The sample SQL file is generated and uploaded as the file[ `create_db.sql`](https://github.com/blocbit/BlocID-frontdoor/blob/master/create_db.sql) , please import it to MySQL.
 
 **Composer**
 
