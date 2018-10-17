@@ -63,7 +63,9 @@ class CandidateAPIController extends Controller
         $candidate->addCandidate(
             $request->getParam('name'),
             $request->getParam('des'),
-            (int)$request->getParam('vote_id')
+			$request->getParam('vurl'),
+			(int)$request->getParam('vote_id'),
+			(int)$request->getParam('user_id')
         );
         return $this->generateJson($response, '1', 'This candidate has been added', '');
     }
@@ -82,7 +84,8 @@ class CandidateAPIController extends Controller
 
         $query->updateCandidate(
                 $request->getParam('name'),
-                $request->getParam('des')
+                $request->getParam('des'),
+				$request->getParam('vurl')
             );
         return $this->generateJson($response, '1', 'This candidate has been updated', '');
     }

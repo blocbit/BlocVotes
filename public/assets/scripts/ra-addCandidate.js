@@ -5,7 +5,7 @@
 $(document).ready(function() {
     $(".btn-add-candidate").on('click', function() {
         var id = $(".vote-id").val();
-        var data = { vote_id: id, name: $(".input-name").val(), des: $(".input-des").val()};
+        var data = { vote_id: id, name: $(".input-name").val(), des: $(".input-des").val(), vurl: $(".input-vurl").val()};
         $.getJSON("/api/addcandidate",data,function(result){
             if(result.success==='1'){
                 swal('Good Job!',result.content,'success');

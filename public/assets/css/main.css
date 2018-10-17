@@ -13,10 +13,44 @@ body {
   color: #676a6d; }
 
 a {
-  color: #3287B2; }
+  color: gold; }
   a:hover, a:focus {
-    color: #3b98c8;
+    color: goldenrod;
     text-decoration: none; }
+
+.btn-info {
+    color: black;
+    background-color: gold;
+	border:none;
+}
+.btn-info:hover, .btn-info:active {
+    color: #fff;
+    background-color: goldenrod;
+	border:none;
+}
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+.btn:hover {
+   color: #fff !important;
+}
+
+.btn:active{
+ background-color: goldenrod !important;
+}
+#background{	
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+.stretch {
+    width:100%;
+    height:100%;
+}
 
 th {
   font-weight: 600; }
@@ -86,7 +120,7 @@ footer {
   left: 0 !important; }
 
 .layout-fullwidth #wrapper .btn-toggle-fullwidth {
-  color: #00AAFF; }
+  color: goldenrod; }
 
 .offcanvas-active #wrapper .sidebar {
   left: 0; }
@@ -104,7 +138,7 @@ footer {
   #wrapper .navbar {
     left: 0 !important; }
   #wrapper .btn-toggle-fullwidth {
-    color: #00AAFF; }
+    color: gold; }
   .btn-toggle-minified {
     display: none; } }
 
@@ -120,7 +154,8 @@ footer {
 html.fullscreen-bg,
 html.fullscreen-bg body,
 html.fullscreen-bg #wrapper {
-  height: 100%; }
+  height: 100%; 
+  padding-top: 30px;}
 
 .vertical-align-wrap {
   position: absolute;
@@ -170,6 +205,19 @@ html.fullscreen-bg #wrapper {
   @media screen and (max-width: 640px) {
     .navbar-default #navbar-menu {
       float: right; } }
+	  
+  .navbar-default .vbrand {
+    float: left;
+    margin-top: 10px;
+    padding: 5px 39px;
+    background-color: #fff; }
+  @media screen and (max-width: 1024px) {
+    .navbar-default .vbrand {
+      padding-left: 30px;
+      padding-right: 15px; } }
+  @media screen and (max-width: 992px) {
+    .navbar-default .vbrand {
+      display: none; } }
 
 .navbar-btn {
   float: left;
@@ -335,7 +383,7 @@ ul.notifications > li {
   .dropdown-menu > li i {
     margin-right: 6px; }
   .dropdown-menu .active > a, .dropdown-menu .active > a:focus, .dropdown-menu .active > a:hover {
-    background-color: #00AAFF; }
+    background-color: goldenrod; }
   .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover {
     color: #a3a3a3; }
 
@@ -352,10 +400,10 @@ ul.notifications > li {
       color: #fff;
       background-color: transparent; }
       .sidebar .nav > li > a:hover i, .sidebar .nav > li > a:focus i, .sidebar .nav > li > a.active i {
-        color: #00AAFF; }
+        color: goldenrod; }
     .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
       background-color: #252c35;
-      border-left-color: #00AAFF; }
+      border-left-color: goldenrod; }
     .sidebar .nav > li > a[data-toggle="collapse"] .icon-submenu {
       display: inline-block;
       vertical-align: middle;
@@ -564,12 +612,14 @@ ul.list-justify > li {
 .btn-xs {
   padding: 5px 14px; }
 
-.btn-primary {
-  background-color: #00AAFF;
-  border-color: #00a0f0; }
-  .btn-primary:hover, .btn-primary:focus {
-    background-color: #00a0f0;
-    border-color: #00a0f0; }
+.btn-primary, .btn-primary:focus  {
+  background-color: gold;
+  color:black;
+  border:none;
+  border-color: gold; }
+  .btn-primary:hover {
+    background-color: goldenrod;
+    border-color: darkgoldenrod; }
 
 .btn-warning {
   background-color: #e4cb10;
@@ -696,7 +746,7 @@ fieldset[disabled] .btn {
     width: 50px;
     height: 50px;
     line-height: 50px;
-    background-color: #0081c2;
+    background-color: goldenrod;
     text-align: center; }
     .metric .icon i {
       font-size: 18px;
@@ -855,7 +905,7 @@ ul.activity-list > li {
   line-height: 2; }
 
 .toast-info {
-  background-color: #00AAFF; }
+  background-color: gold; }
 
 .toast-success {
   background-color: #41B314; }
@@ -884,7 +934,7 @@ ul.activity-list > li {
         outline: none; }
   .custom-tabs-line ul.nav-pills a:hover, .custom-tabs-line ul.nav-pills a:focus {
     color: #fff;
-    background-color: #00AAFF; }
+    background-color: goldenrod; }
 
 .custom-tabs-line.tabs-line-bottom {
   border-bottom: 1px solid #eaeaea; }
@@ -1017,7 +1067,7 @@ ul.activity-list > li {
       display: block;
       width: 100%;
       height: 100%;
-      background: rgba(29,43,83,.75); }
+      background: rgba(29, 28, 4, 0.75); }
   .auth-box .header {
     margin-bottom: 30px; }
   .auth-box .lead {
@@ -1141,7 +1191,7 @@ ul.activity-list > li {
   .profile-header .profile-main {
     position: relative;
     padding: 20px;
-    background-color: #0b5b97;
+    background-color: darkgoldenrod;
     background-repeat: no-repeat;
     background-size: cover; }
   .profile-header .name {
@@ -1195,7 +1245,7 @@ ul.activity-list > li {
   background-color: #b2b2b2; }
 .profile-header .profile-stat {
   position: relative;
-  background-color: #00AAFF;
+  background-color: darkgoldenrod;
   z-index:999;
 }
     .profile-header .profile-stat .stat-item {
@@ -1209,7 +1259,7 @@ ul.activity-list > li {
         right: 0;
         width: 1px;
         height: 100%;
-        background-color: #33bbff; }
+        background-color: gold; }
       .profile-header .profile-stat .stat-item:last-child:after {
         display: none; }
     .profile-header .profile-stat .stat-item span {
@@ -1217,7 +1267,9 @@ ul.activity-list > li {
   @media screen and (max-width: 1023px) {
     .profile-header .profile-stat .stat-item:after {
       display: none; } }
-
+.stat-item {
+	cursor:pointer;
+}
 .profile-detail {
   padding-bottom: 30px; }
 
@@ -1717,7 +1769,7 @@ ul.activity-timeline > li {
     float: left;
     width: 34px;
     height: 34px;
-    background-color: #00AAFF;
+    background-color: gold;
     font-size: 16px;
     color: #fff;
     line-height: 34px;
@@ -1756,6 +1808,8 @@ ul.activity-timeline > li {
     border: 1px solid #CCC; }
 
 .brand .logo{width: 50%;}
+
+.vbrand .logo {width: 50%;}
 
 
 .table-keys td{

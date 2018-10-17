@@ -11,7 +11,6 @@ return array(
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Pimple' => array($vendorDir . '/pimple/pimple/src'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
-    'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
     'BitcoinPHP\\BitcoinECDSA' => array($vendorDir . '/bitcoin-php/bitcoin-ecdsa/src'),
     'AsymmetriCrypt' => array($vendorDir . '/asymmetricrypt/asymmetricrypt/lib'),
 );

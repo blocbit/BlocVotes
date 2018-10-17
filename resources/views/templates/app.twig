@@ -62,7 +62,9 @@
 {% if current_path == path_for('ra.dashboard') %}
 	<script src="/assets/scripts/ra-dashboard.js"></script>
 {% endif %}
-
+{% if current_path == path_for('ra.vote') %}
+	<script src="/assets/scripts/ra-vote.js"></script>
+{% endif %}
 {% if current_path == path_for('ra.candidates') %}
 	<script src="/assets/scripts/ra-candidate.js"></script>
 {% endif %}

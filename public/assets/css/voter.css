@@ -35,12 +35,12 @@
 }
 
 .panel-candidate:hover{
-    border: #00AAFF 1px solid;
+    border: gold 1px solid;
     cursor: pointer;
 }
 
 .selected{
-    background:  #00AAFF;
+    background:  goldenrod;
     color: #fff;
     opacity: 1;
     animation-name: fadeInOpacity;

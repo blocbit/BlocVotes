@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     $(".btn-edit-candidate").click(function(){
         var candidateid = $(".candidate-id").val();
-        var data = { id: candidateid, name: $(".input-name").val(), des: $(".input-des").val()};
+        var data = { id: candidateid, name: $(".input-name").val(), des: $(".input-des").val(),vurl: $(".input-vurl").val()};
         $.getJSON("/api/updatecandidate",data,function(result){
             if(result.success==='1'){
                 $(".modal-edit-candidate").modal("hide");
@@ -36,12 +36,14 @@ function loadCandidate(id){
             $(result.content).each(function (i,item) {
                 var editbutton = '<button type="button" class="btn btn-toggle btn-info" data-toggle="modal" data-target=".modal-edit-candidate"  onclick="editcandidate(' +  item.id +')">Edit</button>';
                 var delbutton =  '<button type="button" class="btn btn-toggle btn-info" onclick="delcandidate(' +  item.id +')">Delete</button>';
-                str +='<div class="col-md-4"><div class="panel panel-headline"><div class="panel-heading"><h3 class="panel-title candidate-' + item.id +'-name">'
+                str +='<div class="container-fluid"><div class="panel panel-headline"><div class="panel-heading"><h3 class="panel-title candidate-' + item.id +'-name">'
                     + item.name +
                     '</h3><p class="panel-subtitle"> #'
                     + item.id +
                     '</p></div><div class="panel-body candidate-' + item.id +'-des"><p>'
                     + item.des +
+                    '</p></div><div class="panel-body">'
+					+ item.vurl +
                     '</p></div><div class="panel-footer"><h5>'
                     + editbutton + ' ' + delbutton +
                     '</h5></div></div></div>';
@@ -55,6 +57,7 @@ function editcandidate(id){
     $(".candidate-id").val(id);
     $(".input-name").val($(".candidate-"+id+"-name").html());
     $(".input-des").val($(".candidate-"+id+"-des").text());
+	$(".input-vurl").val($(".candidate-"+id+"-vurl").text());
 }
 function delcandidate(id) {
     swal({

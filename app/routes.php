@@ -58,7 +58,6 @@ $app->group('',function () {
 	$this->post('/auth/signup','AuthController:postSignUp');
 	$this->get('/auth/signin','AuthController:getSignIn')->setName('auth.signin');
 	$this->post('/auth/signin','AuthController:postSignIn');
-
 })->add(new GuestMiddleware($container));
 
 
@@ -87,6 +86,8 @@ $app->group('',function () {
     $this->get('/ra/addVoter','BallotController:getAddVoter')->setName('ra.addVoter');
     $this->get('/ra/ballot','BallotController:getBallot')->setName('ra.ballot');
     $this->post('/ra/ballot','BallotController:postBallot');
+	//$this->get('/ra/addVote','VoteController:getAddVote')->setName('ra.addVote');
+	$this->get('/ra/vote','VoteController:getVoteList')->setName('ra.vote');
 
 
     $this->get('/ra/addcandidate','CandidateController:getAddCandidate')->setName('ra.addCandidate');;
@@ -111,7 +112,7 @@ $app->group('',function () {
     $this->get('/api/allbitcoinaddress','PublicAPIController:getAllBitcoinAddress');
 
     $this->get('/ea/vote','VoteController:getVoteList')->setName('ea.vote');
-    $this->get('/ea/addVote','VoteController:getAddVote')->setName('ea.addVote');
+	$this->get('/ea/addVote','VoteController:getAddVote')->setName('ea.addVote');
     $this->post('/ea/vote','VoteController:postVote');
 
 
